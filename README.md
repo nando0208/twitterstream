@@ -1,6 +1,6 @@
 # Twitter Stream
 
-The idea of this project is make a continuos stream of tweets filtered by a keyword.
+The idea of this project is make a continuous stream of tweets filtered by a keyword.
 
 ### Setup
 

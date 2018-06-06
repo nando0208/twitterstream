@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EmptyView" customModule="twitterstream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build your stream" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kux-Aa-nKJ">
+                    <rect key="frame" x="109.5" y="50" width="156" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIM-yK-Gd8">
+                    <rect key="frame" x="156.5" y="174" width="63" height="30"/>
+                    <state key="normal" title="Try again"/>
+                    <connections>
+                        <action selector="buttonTouched" destination="iN0-l3-epB" eventType="touchUpInside" id="wXK-Wy-S4t"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type something  and follow all the news" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPg-8E-ou0">
+                    <rect key="frame" x="101" y="103" width="173" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kux-Aa-nKJ" secondAttribute="trailing" constant="20" id="4wh-ck-XP9"/>
+                <constraint firstItem="Kux-Aa-nKJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="5ux-le-63w"/>
+                <constraint firstItem="XIM-yK-Gd8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="8SH-S3-szC"/>
+                <constraint firstItem="XPg-8E-ou0" firstAttribute="centerX" secondItem="Kux-Aa-nKJ" secondAttribute="centerX" id="IMa-Wy-kQ3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XIM-yK-Gd8" secondAttribute="trailing" constant="20" id="QqW-SF-yf7"/>
+                <constraint firstItem="Kux-Aa-nKJ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="YC9-DM-lGh"/>
+                <constraint firstItem="XPg-8E-ou0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="YzG-Rh-gXA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XPg-8E-ou0" secondAttribute="trailing" constant="20" id="bwZ-iA-gPt"/>
+                <constraint firstItem="XIM-yK-Gd8" firstAttribute="top" secondItem="XPg-8E-ou0" secondAttribute="bottom" constant="30" id="l0X-yl-f5M"/>
+                <constraint firstItem="XIM-yK-Gd8" firstAttribute="centerX" secondItem="Kux-Aa-nKJ" secondAttribute="centerX" id="lvz-Ke-Z7Z"/>
+                <constraint firstItem="Kux-Aa-nKJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="qEL-ad-8h8"/>
+                <constraint firstItem="XPg-8E-ou0" firstAttribute="top" secondItem="Kux-Aa-nKJ" secondAttribute="bottom" constant="30" id="xqh-Vd-AjD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="actionButton" destination="XIM-yK-Gd8" id="EIj-xo-4U7"/>
+                <outlet property="subTitleLabel" destination="XPg-8E-ou0" id="zix-xj-Sqb"/>
+                <outlet property="titleLabel" destination="Kux-Aa-nKJ" id="49V-xf-yCU"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

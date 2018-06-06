@@ -2,6 +2,10 @@
 
 The idea of this project is make a continuos stream of tweets filtered by a keyword.
 
+### Setup
+
+You need to create a app on https://apps.twitter.com/ and setup the Consumer-Key and Secret-Key on AppDelegate.swift
+
 ### references:
 * [Consuming Streaming Data](https://developer.twitter.com/en/docs/tutorials/consuming-streaming-data)
 * [POST statuses/filter](https://developer.twitter.com/en/docs/tweets/filter-realtime/api-reference/post-statuses-filter.html)

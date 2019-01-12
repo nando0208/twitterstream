@@ -1,0 +1,12 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Run all tests"
+  lane :tests do
+  	scan(scheme: "twitterstream", devices: devices)
+  end
+end
+
+def devices
+	["iPhone 8"]
+end

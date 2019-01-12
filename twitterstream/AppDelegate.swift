@@ -11,8 +11,8 @@ import TwitterKit
 
 // You need to create a app on https://apps.twitter.com/
 // to get a Consumer Key and a Consumer Secret Key
-let consumerKey = ""
-let consumerSecretKey = ""
+let consumerKey = "QAEcRNY2dbvfPjtk0PnQ3ErpZ"
+let consumerSecretKey = "Gfmz2OdvD0XKsFzbKAsLW3m62QjnoKIpxEGe86rjceOxttCqmO"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

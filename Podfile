@@ -7,28 +7,28 @@ target 'twitterstream' do
     # Development Tools
 
     # Code lint to Swift
-    pod 'SwiftLint', '0.25.0'
+    pod 'SwiftLint'
 
     # Parse
-    pod 'Unbox', '2.5.0'
+    pod 'Unbox'
 
     # Twitter
-    pod 'TwitterKit', '3.3.0'
+    pod 'TwitterKit'
 
     # Autolayout
-    pod 'Cartography', '3.0.1'
+    pod 'Cartography'
 
     # Image downloader and cache
-    pod 'AlamofireImage', '3.3.1'
+    pod 'AlamofireImage'
 end
 
 target 'twitterstreamTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Nimble-Snapshots', '6.6.0'
-    pod 'Quick', '1.2.0'
-    pod 'Nimble', '7.0.3'
-    pod 'Unbox', '2.5.0'
+    pod 'Nimble-Snapshots'
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'Unbox'
 end
 
 target 'twitterstreamUITests' do

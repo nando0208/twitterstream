@@ -1,0 +1,63 @@
+PODS:
+  - Alamofire (4.8.0)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
+  - Cartography (3.1.0)
+  - iOSSnapshotTestCase (4.0.1):
+    - iOSSnapshotTestCase/SwiftSupport (= 4.0.1)
+  - iOSSnapshotTestCase/Core (4.0.1)
+  - iOSSnapshotTestCase/SwiftSupport (4.0.1):
+    - iOSSnapshotTestCase/Core
+  - Nimble (7.3.1)
+  - Nimble-Snapshots (6.9.0):
+    - Nimble-Snapshots/Core (= 6.9.0)
+  - Nimble-Snapshots/Core (6.9.0):
+    - iOSSnapshotTestCase (~> 4.0)
+    - Nimble (~> 7.0)
+  - Quick (1.3.2)
+  - SwiftLint (0.29.3)
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.2):
+    - TwitterCore (>= 3.2.0)
+  - Unbox (3.0.0)
+
+DEPENDENCIES:
+  - AlamofireImage
+  - Cartography
+  - Nimble
+  - Nimble-Snapshots
+  - Quick
+  - SwiftLint
+  - TwitterKit
+  - Unbox
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - Cartography
+    - iOSSnapshotTestCase
+    - Nimble
+    - Nimble-Snapshots
+    - Quick
+    - SwiftLint
+    - TwitterCore
+    - TwitterKit
+    - Unbox
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
+  Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
+  iOSSnapshotTestCase: f3b2b7e606fe03fdbe49af84316bd235df32dc44
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Nimble-Snapshots: 79394f8d0aea3df54bd5ff78ee9dff05a523a09c
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  SwiftLint: bfa7ca7b4d170cfaf0d236ca3ffd969e88a2f002
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
+  Unbox: 9ed33b2a31f7a8a049f54b94d40c4a52a28c4d9d
+
+PODFILE CHECKSUM: 36e7cfb9582fcc8b4cfaa4143fc3cd57aa1c60a9
+
+COCOAPODS: 1.5.3

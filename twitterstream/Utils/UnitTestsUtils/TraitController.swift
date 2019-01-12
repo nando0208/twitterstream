@@ -10,11 +10,11 @@
 
 import UIKit
 
-internal enum Device {
-    case phone4inch
-    case phone47inch
-    case phone55inch
-    case phone58inch
+internal enum Device: CaseIterable {
+    case phone4inch   // iPhone SE
+    case phone47inch // iPhone 8, 7, 6S
+    case phone55inch // iPhone 8 Plus, 7 Plus, 6S Plus
+    case phone58inch // iPhone X
     case pad
 }
 
@@ -23,7 +23,7 @@ internal enum Orientation {
     case landscape
 }
 
-//swiftlint:disable:next cyclomatic_complexity function_body_length
+//swiftlint:disable:next cyclomaticcomplexity functionbodylength
 internal func traitControllers(device: Device = .phone47inch,
                                orientation: Orientation = .portrait,
                                child: UIViewController = UIViewController(),

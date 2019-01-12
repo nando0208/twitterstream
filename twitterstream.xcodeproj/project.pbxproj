@@ -35,7 +35,6 @@
 		59B21B17208DA74900989CF0 /* FilterInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044CB62083B1AD001704B7 /* FilterInteractorSpec.swift */; };
 		59B21B29208DF49300989CF0 /* UnitTestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B21B27208DF46F00989CF0 /* UnitTestUtils.swift */; };
 		59B21B2A208DF54500989CF0 /* TraitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B21B24208DF44B00989CF0 /* TraitController.swift */; };
-		59B21B2B208DF87F00989CF0 /* FilterViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B21B1A208DF1C500989CF0 /* FilterViewSpec.swift */; };
 		59CEB721207D1E0500F91F39 /* StreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CEB720207D1E0500F91F39 /* StreamManager.swift */; };
 		59DE2073208BF5070082E794 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DE2072208BF5060082E794 /* ServiceRequest.swift */; };
 		59DE2076208BF9340082E794 /* TwitterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DE2075208BF9340082E794 /* TwitterRequest.swift */; };
@@ -692,12 +691,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-twitterstream/Pods-twitterstream-resources.sh",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -812,7 +809,6 @@
 				59B21B17208DA74900989CF0 /* FilterInteractorSpec.swift in Sources */,
 				59B21B29208DF49300989CF0 /* UnitTestUtils.swift in Sources */,
 				59B21B2A208DF54500989CF0 /* TraitController.swift in Sources */,
-				59B21B2B208DF87F00989CF0 /* FilterViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

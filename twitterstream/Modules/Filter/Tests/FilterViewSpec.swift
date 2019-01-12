@@ -16,6 +16,9 @@ import Nimble_Snapshots
 /*//swiftlint:disable function_body_length*/
 //swiftlint:disable line_length
 class FilterViewSpec: QuickSpec {
+
+    let record = false
+
     override func spec() {
 
         describe("FilterView") {
@@ -30,7 +33,11 @@ class FilterViewSpec: QuickSpec {
                     }
 
                     it("should have correct empty view \(container.device.hashValue)") {
-                        expect(container.parent).to(haveValidSnapshot(named: "filterView_emptyState_device_\(container.device.hashValue)"))
+                        if self.record {
+                            expect(container.parent).to(recordSnapshot(named: "filterView_emptyState_device_\(container.device.hashValue)"))
+                        } else {
+                            expect(container.parent).to(haveValidSnapshot(named: "filterView_emptyState_device_\(container.device.hashValue)"))
+                        }
                     }
                 }
             }
@@ -46,7 +53,11 @@ class FilterViewSpec: QuickSpec {
                     }
 
                     it("should show tweets \(container.device.hashValue)") {
-                        expect(container.parent).to(haveValidSnapshot(named: "filterView_content_device_\(container.device.hashValue)"))
+                        if self.record {
+                            expect(container.parent).to(recordSnapshot(named: "filterView_content_device_\(container.device.hashValue)"))
+                        } else {
+                            expect(container.parent).to(haveValidSnapshot(named: "filterView_content_device_\(container.device.hashValue)"))
+                        }
                     }
                 }
             }
@@ -62,7 +73,11 @@ class FilterViewSpec: QuickSpec {
                     }
 
                     it("should show tweets \(container.device.hashValue)") {
-                        expect(container.parent).to(haveValidSnapshot(named: "filterView_error_device_\(container.device.hashValue)"))
+                        if self.record {
+                            expect(container.parent).to(recordSnapshot(named: "filterView_error_device_\(container.device.hashValue)"))
+                        } else {
+                            expect(container.parent).to(haveValidSnapshot(named: "filterView_error_device_\(container.device.hashValue)"))
+                        }
                     }
                 }
             }

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='twitterstreamTests.xctest' tests='10' failures='0'>
+  <testsuite name='twitterstreamTests.FilterInteractorSpec' tests='10' failures='0'>
+    <testcase classname='twitterstreamTests.FilterInteractorSpec' name='FilterInteractor__should_success_in_getting_tweets__fetched_tweets' time='0.007'/>
+    <testcase classname='twitterstreamTests.FilterInteractorSpec' name='FilterInteractor__should_success_in_getting_tweets__correct_number_of_tweets' time='0.001'/>
+    <testcase classname='twitterstreamTests.FilterInteractorSpec' name='FilterInteractor__should_success_in_getting_tweets__didn_t_get_any_error' time='0.001'/>
+    <testcase classname='twitterstreamTests.FilterInteractorSpec' name='FilterInteractor__should_failued_after_get_some_tweets__get_error' time='0.001'/>
+    <testcase classname='twitterstreamTests.FilterInteractorSpec' name='FilterInteractor__should_failued_after_get_some_tweets__get_data_before_get_error' time='0.001'/>
+    <testcase classname='twitterstreamTests.FilterInteractorSpec' name='FilterInteractor__should_failued_after_get_some_tweets__didn_t_lose_tweets_before_error' time='0.001'/>
+    <testcase classname='twitterstreamTests.FilterInteractorSpec' name='FilterInteractor__should_delete_tweets_to_be_consistent__keep_with_the_same_qtd_of_tweets' time='0.002'/>
+    <testcase classname='twitterstreamTests.FilterInteractorSpec' name='FilterInteractor__should_delete_tweets_to_be_consistent__don_t_have_more_than_5_tweets_limit_' time='0.002'/>
+    <testcase classname='twitterstreamTests.FilterInteractorSpec' name='FilterInteractor__Stop_and_clean_data__zero_tweets' time='0.001'/>
+    <testcase classname='twitterstreamTests.FilterInteractorSpec' name='FilterInteractor__Stop_and_reconnect__get_tweets_after_reconect' time='0.001'/>
+  </testsuite>
+</testsuites>

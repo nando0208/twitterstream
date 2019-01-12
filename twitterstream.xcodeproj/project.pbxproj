@@ -912,7 +912,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = twitterstream/Info.plist;
+				INFOPLIST_FILE = twitterstream/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ferreira-fernando.twitterstream";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1072,7 +1072,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = twitterstream/Info.plist;
+				INFOPLIST_FILE = twitterstream/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ferreira-fernando.twitterstream";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1088,7 +1088,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = twitterstream/Info.plist;
+				INFOPLIST_FILE = twitterstream/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ferreira-fernando.twitterstream";
 				PRODUCT_NAME = "$(TARGET_NAME)";

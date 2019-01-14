@@ -1,12 +1,121 @@
-default_platform(:ios)
+default_platform :ios
 
 platform :ios do
+
   desc "Run all tests"
-  lane :tests do
-  	scan(scheme: "twitterstream", devices: devices)
+  lane :tests do |options|
+
+    BUILD_TYPE = options[:build_type]
+
+    SCHEME = ENV["SCHEME"] + "-" + BUILD_TYPE
+
+    scan(scheme: SCHEME, devices: devices)
   end
+
+  desc "Get code coverage"
+  lane :code_coverage do |options|
+
+    BUILD_TYPE = options[:build_type]
+
+    SCHEME = ENV["SCHEME"] + "-" + BUILD_TYPE
+
+    slather(
+      scheme: SCHEME,
+      proj: ENV["XCODE_PROJECT"],
+      html: true,
+      output_directory: "reports/",
+      workspace: ENV["XCODE_WORKSPACE"]
+    )
+  end
+
+  desc "Archive project before submit review/beta"
+  lane :archive do |options|
+
+    BUILD_TYPE = options[:build_type]
+
+    SCHEME = ENV["SCHEME"] + "-" + BUILD_TYPE
+
+    gym(
+      workspace: ENV["XCODE_WORKSPACE"],
+      scheme: SCHEME,
+      configuration: BUILD_TYPE,
+      output_directory: "build",
+      output_name: "ConsumerApp.ipa",
+      export_team_id: ENV['TEAM_ID'],
+      export_method: "app-store",
+      export_options: {
+        includeBitcode: true,
+        compileBitcode: true
+      }
+    )
+  end
+
+  desc "Upload to itunes connect using delivey"
+  lane :submit_review do
+
+    deliver(
+      build_number: increment_build_number,
+      submit_for_review: false,
+      automatic_release: false,
+      force: true, # Skip HTMl report verification
+      skip_metadata: true,
+      skip_screenshots: true,
+      skip_binary_upload: true
+    )
+  end
+
+  desc "Send message to a Slack channel"
+  lane :message_slack do |options|
+
+    BUILD_TYPE = options[:build_type]
+
+    SCHEME = ENV["SCHEME"] + "-" + BUILD_TYPE
+
+    # Post message to slack
+    slack(
+      message: SCHEME + " - Nova build disponível no Beta! :rocket:",
+      slack_url: ENV["SLACK_WEBHOOK"],
+      payload: {
+        'Build Date' => Time.new.to_s,
+        'Built by' => 'Fastlane',
+        'What\'s new \n' => "Festa e alegria"
+      }
+    )
+  end
+
+  desc "Submit build to Fabric"
+  lane :beta do
+
+    BUILD_TYPE = options[:build_type]
+
+    SCHEME = ENV["SCHEME"] + "-" + BUILD_TYPE
+
+    build_app(
+      scheme: SCHEME,
+      export_method: "ad-hoc"
+    )
+
+    crashlytics(
+      api_token: "[insert_key_here]",
+      build_secret: "[insert_key_here]"
+    )
+  end
+
 end
 
 def devices
-	["iPhone 8"]
+  ["iPhone 8"]
 end
+
+# Doc About fastlane
+#
+# => Lanes - https://docs.fastlane.tools/advanced/lanes/
+# => [slather] Code coverage - https://docs.fastlane.tools/actions/slather/
+# => [gym] Archive and build - https://docs.fastlane.tools/actions/gym/
+# => [deliver] Delivery - https://docs.fastlane.tools/actions/deliver/
+# => Slack - https://docs.fastlane.tools/actions/slack/
+# => Build number - https://docs.fastlane.tools/actions/increment_build_number/
+# => Version number - https://docs.fastlane.tools/actions/increment_version_number/
+#
+# Fastlane examples
+# => https://github.com/ayushn21/fastlane-example/blob/master/fastlane/Fastfile
